@@ -1,2 +1,2 @@
-import { useEffect, useState } from 'react';
-import { fetchTrends } from 'services/MovieAPI';
+// import { useEffect, useState } from 'react';
+// import { fetchTrends } from 'services/MovieAPI';
