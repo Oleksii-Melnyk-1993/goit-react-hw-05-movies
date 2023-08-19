@@ -6,7 +6,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { PropagateLoader } from 'react-spinners';
 import { css } from '@emotion/react';
-import { toast } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const override = css`
   display: block;
