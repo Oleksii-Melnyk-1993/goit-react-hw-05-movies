@@ -15,11 +15,11 @@ export const App = () => {
         <Route index element={<Home />} />
         <Route path="movies" element={<Movies />} />
         <Route path="movies/:movieId" element={<MovieDetails />}>
-          <Route past="cast" element={<Cast />} />
-          <Route past="reviews" element={<Reviews />} />
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
+        <Route path="*" element={<Home />} />
       </Route>
-      <Route path="*" element={<Home />} />
     </Routes>
     // <div
     //   style={{

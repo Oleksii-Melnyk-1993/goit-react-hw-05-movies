@@ -25,7 +25,7 @@ export const Cast = () => {
 
   return (
     <div>
-      {!cast.length && <p>No info for this movie...</p>}
+      {!cast.length && <p>No cast for this movie...</p>}
       <ul>
         {cast.map(actor => {
           return (
