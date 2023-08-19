@@ -13,9 +13,9 @@ export const fetchTrends = async () => {
   return data;
 };
 
-export const fetchMovie = async MovieId => {
+export const fetchMovie = async movieId => {
   axios.defaults.baseURL = 'https://api.themoviedb.org/3/movie';
-  const { data } = await axios(`${MovieId}`, {
+  const { data } = await axios(`${movieId}`, {
     params: {
       api_key: KEY,
     },
@@ -34,9 +34,9 @@ export const fetchMovies = async query => {
   return data;
 };
 
-export const fetchCast = async MovieId => {
+export const fetchCast = async movieId => {
   axios.defaults.baseURL = 'https://api.themoviedb.org/3/movie';
-  const { data } = await axios(`${MovieId}/credits`, {
+  const { data } = await axios(`${movieId}/credits`, {
     params: {
       api_key: KEY,
     },
@@ -44,9 +44,9 @@ export const fetchCast = async MovieId => {
   return data;
 };
 
-export const fetchReviews = async MovieId => {
+export const fetchReviews = async movieId => {
   axios.defaults.baseURL = 'https://api.themoviedb.org/3/movie';
-  const { data } = await axios(`${MovieId}/reviews`, {
+  const { data } = await axios(`${movieId}/reviews`, {
     params: {
       api_key: KEY,
     },

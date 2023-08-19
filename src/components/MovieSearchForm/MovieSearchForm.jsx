@@ -4,15 +4,15 @@ import toast from 'react-hot-toast';
 
 export const MovieaSearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchValue = searchParams.get('q') ?? '';
+  const searchValue = searchParams.get('searchQuery') ?? '';
 
   const handleSumbit = e => {
     e.preventDefault();
-    if (e.target.elements.q.value.trim() === '') {
+    if (e.target.elements.searchQuery.value.trim() === '') {
       toast.error('Please, enter something');
       return;
     }
-    setSearchParams({ q: e.target.elements.searchValue.value });
+    setSearchParams({ searchQuery: e.target.elements.searchQuery.value });
     e.currentTarget.reset();
   };
 
@@ -22,7 +22,7 @@ export const MovieaSearchForm = () => {
         <input
           type="text"
           placeholder="Enter movie..."
-          name="q"
+          name="searchQuery"
           defaultValue={searchValue}
         />
         <button type="submit">Search</button>
