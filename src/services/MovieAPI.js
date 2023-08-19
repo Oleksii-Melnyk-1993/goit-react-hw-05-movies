@@ -24,8 +24,8 @@ export const fetchMovie = async movieId => {
 };
 
 export const fetchMovies = async query => {
-  axios.defaults.baseURL = 'https://api.themoviedb.org/3/movie';
-  const { data } = await axios(`${query}`, {
+  axios.defaults.baseURL = 'https://api.themoviedb.org/3/search/movie';
+  const { data } = await axios({
     params: {
       api_key: KEY,
       query,
