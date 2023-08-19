@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovies } from 'services/MovieAPI';
-import { MovieaSearchForm } from 'components/MovieSearchForm/MovieSearchForm';
+import { MovieSearchForm } from 'components/MovieSearchForm/MovieSearchForm';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { PropagateLoader } from 'react-spinners';
@@ -38,11 +38,11 @@ const Movies = () => {
     };
     fetchData();
   }, [query]);
+
   return (
     <div>
       {isLoading && (
         <Loader>
-          {' '}
           <PropagateLoader
             color={'#36D7B7'}
             css={override}
@@ -50,7 +50,7 @@ const Movies = () => {
           />
         </Loader>
       )}
-      <MovieaSearchForm />
+      <MovieSearchForm />
       <MoviesList movies={movies} />
     </div>
   );

@@ -1,8 +1,8 @@
 import { useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
-// import css from './MovieaSearch.module.css';
+// import css from './MovieSearchForm.module.css';
 
-export const MovieaSearchForm = () => {
+export const MovieSearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchValue = searchParams.get('searchQuery') ?? '';
 
