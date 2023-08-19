@@ -31,7 +31,7 @@ export const Cast = () => {
           return (
             <li key={actor.id}>
               <img
-                scr={
+                src={
                   actor.profile_path
                     ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
                     : defaultImageCaster
