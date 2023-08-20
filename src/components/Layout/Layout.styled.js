@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
+  background-color: #e7eaf6;
   @media screen and (min-width: 768px) {
     max-width: 1440px;
     margin: 0 auto;

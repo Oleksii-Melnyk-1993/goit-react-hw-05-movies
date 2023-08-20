@@ -1,5 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import css from './MovieSearchForm.module.css';
 // import css from './MovieSearchForm.module.css';
 
 export const MovieSearchForm = () => {
@@ -17,15 +18,22 @@ export const MovieSearchForm = () => {
   };
 
   return (
-    <div>
-      <form autoComplete="off" onSubmit={handleSumbit}>
+    <div className={css.formContainer}>
+      <form
+        className={css.formSearch}
+        autoComplete="off"
+        onSubmit={handleSumbit}
+      >
         <input
+          className={css.input}
           type="text"
           placeholder="Enter movie..."
           name="searchQuery"
           defaultValue={search}
         />
-        <button type="submit">Search</button>
+        <button className={css.buttonSubmit} type="submit">
+          Search
+        </button>
       </form>
     </div>
   );

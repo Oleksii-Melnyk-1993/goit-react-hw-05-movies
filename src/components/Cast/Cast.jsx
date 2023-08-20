@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { fetchCast } from 'services/MovieAPI';
 import { useState, useEffect } from 'react';
+import css from './Cast.module.css';
 
 export const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -26,14 +27,14 @@ export const Cast = () => {
   return (
     <div>
       {!cast.length && <p>No cast for this movie...</p>}
-      <ul>
+      <ul className={css.listCast}>
         {cast.map(actor => {
           return (
-            <li key={actor.id}>
+            <li key={actor.id} className={css.castItem}>
               <img
                 src={
                   actor.profile_path
-                    ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
+                    ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
                     : defaultImageCaster
                 }
                 alt={actor.name}

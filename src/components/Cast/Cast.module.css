@@ -1,0 +1,15 @@
+.listCast {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style-type: none;
+}
+.castItem {
+  flex-basis: calc((100% - 30px) / 3);
+}
+@media screen and (min-width: 768px) {
+  .castItem {
+    flex-basis: calc((100% - 105px) / 8);
+  }
+}
