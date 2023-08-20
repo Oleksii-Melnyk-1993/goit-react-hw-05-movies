@@ -1,0 +1,76 @@
+.backLink {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin: 15px;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  text-decoration: none;
+  background-color: #a2a8d3;
+  color: white;
+  &:hover {
+    background-color: #38598b;
+    font-weight: 500;
+  }
+}
+.containerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.imageWrap {
+  display: flex;
+  justify-content: center;
+}
+.imagePoster {
+  border-radius: 5px;
+  width: 350px;
+}
+
+.listDetails {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+.linkInfo {
+  display: block;
+  width: 100px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 35px 5px 35px;
+  &:hover {
+    background-color: #a2a8d3;
+    font-weight: 500;
+  }
+}
+.infoWrap {
+  padding-left: 15px;
+}
+.prevWrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .containerDetails {
+    flex-direction: row;
+  }
+  .imagePoster {
+    min-width: 300px;
+  }
+  .listDetails {
+    justify-content: flex-start;
+  }
+  .linkInfo {
+    margin: 15px;
+  }
+  .prevWrap {
+    padding-left: 0;
+  }
+}

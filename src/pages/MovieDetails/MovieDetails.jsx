@@ -4,7 +4,7 @@ import { Outlet, useParams, useLocation, Link } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import { PropagateLoader } from 'react-spinners';
 import { css } from '@emotion/react';
-
+import style from './MovieDetails.module.css';
 const override = css`
   display: block;
   margin: 0 auto;
@@ -47,10 +47,13 @@ const MoviesDetails = () => {
           />
         </Loader>
       )}
-      <Link to={backLinkRef.current}>Go Back</Link>
-      <div className="div">
-        <div>
+      <Link className={style.backLink} to={backLinkRef.current}>
+        Go Back
+      </Link>
+      <div className={style.containerDetails}>
+        <div className={style.imageWrap}>
           <img
+            className={style.imagePoster}
             alt={movie.title}
             src={
               movie.poster_path
@@ -59,7 +62,7 @@ const MoviesDetails = () => {
             }
           />
         </div>
-        <div>
+        <div className={style.infoWrap}>
           <h1 className="h1">{movie.title}</h1>
           <p>
             User scores: <b>{Math.round(movie.vote_average * 10)}%</b>
@@ -70,14 +73,18 @@ const MoviesDetails = () => {
           <p>{movie.genres?.map(({ name }) => name).join(', ')}</p>
         </div>
       </div>
-      <div>
+      <div className={style.prevWrap}>
         <h3>Previus information</h3>
-        <ul>
+        <ul className={style.listDetails}>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link className={style.linkInfo} to="cast">
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link className={style.linkInfo} to="reviews">
+              Reviews
+            </Link>
           </li>
         </ul>
         <Outlet />
