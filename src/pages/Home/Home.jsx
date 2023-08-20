@@ -4,6 +4,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { css } from '@emotion/react';
 import { Loader } from 'components/Loader/Loader';
 import { PropagateLoader } from 'react-spinners';
+import style from './Home.module.css';
 
 const override = css`
   display: block;
@@ -41,7 +42,7 @@ const Home = () => {
           />
         </Loader>
       )}
-      <h1>Most popular movies</h1>
+      <h1 className={style.titleHome}>Most popular movies</h1>
       <MoviesList movies={movies} />
     </>
   );
