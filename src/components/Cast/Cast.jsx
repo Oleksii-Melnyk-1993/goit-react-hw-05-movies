@@ -3,7 +3,7 @@ import { fetchCast } from 'services/MovieAPI';
 import { useState, useEffect } from 'react';
 import css from './Cast.module.css';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
 
@@ -47,3 +47,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;

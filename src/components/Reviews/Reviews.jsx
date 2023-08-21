@@ -3,7 +3,7 @@ import { fetchReviews } from 'services/MovieAPI';
 import { useState, useEffect } from 'react';
 import css from './Reviews.module.css';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
 
@@ -36,3 +36,5 @@ export const Reviews = () => {
     </div>
   );
 };
+
+export default Reviews;
